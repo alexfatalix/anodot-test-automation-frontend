@@ -1,0 +1,23 @@
+[
+    {
+        "TestCase": 1,
+        "convertedFromValue": "degree Celsius",
+        "convertedToValue": "degree Fahrenheit",
+        "givenTemperature": 45,
+        "expectedTemperature": 113
+    },
+    {
+        "TestCase": 2,
+        "convertedFromValue": "degree Reaumur",
+        "convertedToValue": "degree Rankine",
+        "givenTemperature": -100,
+        "expectedTemperature": 266.67
+    },
+    {
+        "TestCase": 3,
+        "convertedFromValue": "degree Reaumur",
+        "convertedToValue": "kelvin",
+        "givenTemperature": 25.4,
+        "expectedTemperature": 304.9
+    }
+]
