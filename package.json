@@ -1,0 +1,22 @@
+{
+  "name": "anodot-test-automation-frontend",
+  "version": "1.0.0",
+  "description": "Frontent home assignment for anodot AQA position",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexfatalix/anodot-test-automation-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexfatalix/anodot-test-automation-frontend/issues"
+  },
+  "homepage": "https://github.com/alexfatalix/anodot-test-automation-frontend#readme",
+  "devDependencies": {
+    "cypress": "^12.7.0"
+  }
+}
