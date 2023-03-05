@@ -1,12 +1,17 @@
+import characterdata from "../../fixtures/temperature_data.json"
+
 describe('dropdowns convertations', () =>{
-    before(() => {
+    beforeEach(() => {
         cy.visit('/temperature-converter/')
     })
-    it('Temperature convertation test', () =>{
-        cy.get('select[name="convertFrom"]').select("degree Celsius")
-        cy.get('select[name="convertTo"]').select("degree Fahrenheit")
-        cy.get('input[name="userInput"]').clear().type(10)
-        cy.get('input[name="Go"]').click()
-        cy.get('div[id="answer"]').children('p').invoke("text").should("be.eq", "10 degree Celsius = 50 degree Fahrenheit")
+    characterdata.forEach((data) =>{
+        it(`Temperature convertation test ${data.TestCase}`, () =>{
+            cy.get('select[name="convertFrom"]').select(data.convertedFromValue)
+            cy.get('select[name="convertTo"]').select(data.convertedToValue)
+            cy.get('input[name="userInput"]').clear().type(data.givenTemperature)
+            cy.get('input[name="Go"]').click()
+            cy.get('div[id="answer"]').children('p').invoke("text").should("be.eq",
+            `${data.givenTemperature} ${data.convertedFromValue} = ${data.expectedTemperature} ${data.convertedToValue}`)
+        });
     });
 })
